@@ -6,20 +6,20 @@
     </ul>
   </div>
 </template>
+
 <script>
 import shop from "@/api/shop";
+import store from "@/store/index";
+
 export default {
-  data() {
-    console.log("Data ne!!!");
-    return {
-      products: []
-    };
+  computed: {
+    products() {
+      return store.getters.availableProducts;
+    }
   },
   created() {
-    console.log("Created ne!!!");
     shop.getProducts(products => {
-      this.products = products;
-      console.log("Products ne!!!");
+      store.commit("setProducts", products);
     });
   }
 };
