@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>All Destinations</h1>
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
     <div class="destinations">
       <div v-for="destination in destinations" :key="destination.name">
         <router-link :to="{name: 'DestinationDetails', params:{id:destination.id} }">
