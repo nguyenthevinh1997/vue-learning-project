@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheNavigation />
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <!-- <transition name="moveUp"> -->
       <!-- <transition name="slide" mode="out-in"> -->
       <router-view :key="$route.path" />
