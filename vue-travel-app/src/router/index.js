@@ -45,18 +45,18 @@ const routes = [
   },
   {
     path: "/user",
-    name: "User",
+    name: "user",
     component: () => import(/* webpackChunkName: "User" */ "../views/User.vue"),
     meta: { requiresAuth: true },
   },
   {
     path: "/login",
-    name: "Login",
+    name: "login",
     component: () =>
       import(/* webpackChunkName: "User" */ "../views/Login.vue"),
   },
   {
-    path: "404",
+    path: "/404",
     alias: "*",
     name: "notFound",
     component: () =>
@@ -92,7 +92,7 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     //need to login
     if (!store.user) {
-      next({ name: "Login" });
+      next({ name: "login" });
     } else {
       next();
     }

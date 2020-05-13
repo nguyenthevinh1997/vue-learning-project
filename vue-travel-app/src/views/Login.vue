@@ -1,17 +1,17 @@
 <template>
   <div class="login">
     <h1>Login</h1>
-    <class class="form">
+    <div class="form">
       <label for="username">Username</label>
       <input v-model="username" type="text" name="username" class="input" />
       <label for="password">Password</label>
       <input v-model="password" type="password" class="input" />
       <button @click="login" class="btn">Login</button>
-    </class>
+    </div>
   </div>
 </template>
 <script>
-import store from "@/store";
+import store from "@/store.js";
 export default {
   data() {
     return {
