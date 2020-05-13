@@ -70,4 +70,9 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+.btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
 </style>
