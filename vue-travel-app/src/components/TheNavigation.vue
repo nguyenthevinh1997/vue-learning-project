@@ -5,13 +5,18 @@
       <li class="links">
         <router-link to="/">Home</router-link>
       </li>
-      <li v-for="destination in destinations" :key="destination.name" class="links">
+      <li
+        v-for="destination in destinations"
+        :key="destination.name"
+        class="links"
+      >
         <router-link
           :to="{
-          name: 'DestinationDetails',
-          params: {slug:destination.slug}
-        }"
-        >{{destination.name}}</router-link>
+            name: 'DestinationDetails',
+            params: { slug: destination.slug }
+          }"
+          >{{ destination.name }}</router-link
+        >
       </li>
       <li class="links">
         <router-link to="/user">Dashboard</router-link>

@@ -1,9 +1,12 @@
 <template>
   <section>
-    <h2>{{experience.name}}</h2>
+    <h2>{{ experience.name }}</h2>
     <div class="experience-details">
-      <img :src="require(`@/assets/${experience.image}`)" :alt="experience.name " />
-      <p>{{ experience.description}}</p>
+      <img
+        :src="require(`@/assets/${experience.image}`)"
+        :alt="experience.name"
+      />
+      <p>{{ experience.description }}</p>
     </div>
   </section>
 </template>

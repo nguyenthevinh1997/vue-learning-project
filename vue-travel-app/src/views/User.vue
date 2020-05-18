@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Wellcome {{user}}</h1>
+    <h1>Wellcome {{ user }}</h1>
     <p>
-      <router-link :to="{name: 'invoices'}">Invoices</router-link>
+      <router-link :to="{ name: 'invoices' }">Invoices</router-link>
     </p>
     <button @click="logOut" class="btn">Log out</button>
   </div>

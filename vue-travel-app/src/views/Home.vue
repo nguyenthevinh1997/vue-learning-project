@@ -4,12 +4,25 @@
     <i class="fa fa-arrow-up" aria-hidden="true"></i>
     <div class="destinations">
       <div v-for="destination in destinations" :key="destination.name">
-        <router-link :to="{name: 'DestinationDetails', params:{slug:destination.slug} }">
-          <h2>{{destination.name}}</h2>
+        <router-link
+          :to="{
+            name: 'DestinationDetails',
+            params: { slug: destination.slug }
+          }"
+        >
+          <h2>{{ destination.name }}</h2>
         </router-link>
         <figure>
-          <router-link :to="{name: 'DestinationDetails',params:{slug:destination.slug}}">
-            <img :src="require(`@/assets/${destination.image}`)" alt="destination.name" />
+          <router-link
+            :to="{
+              name: 'DestinationDetails',
+              params: { slug: destination.slug }
+            }"
+          >
+            <img
+              :src="require(`@/assets/${destination.image}`)"
+              alt="destination.name"
+            />
           </router-link>
         </figure>
       </div>
@@ -29,6 +42,7 @@ export default {
     };
   }
 };
+console.log(process.env);
 </script>
 <style scoped>
 .home {
