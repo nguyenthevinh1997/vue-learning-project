@@ -1,0 +1,2 @@
+node app.js remove --title="title-3"
+node app.js add --title="title-3" --body="test" 
