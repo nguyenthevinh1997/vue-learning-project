@@ -6,7 +6,6 @@ const forecast = (latitude, longitude, callback) => {
     latitude +
     "," +
     longitude;
-  console.log(url);
   request({ url: url, json: true }, (error, response) => {
     if (error) {
       callback("Unable to connect to weather service!", undefined);
