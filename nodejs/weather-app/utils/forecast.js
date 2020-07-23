@@ -6,20 +6,19 @@ const forecast = (latitude, longitude, callback) => {
     latitude +
     "," +
     longitude;
-  request({ url: url, json: true }, (error, response) => {
+  request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to weather service!", undefined);
-    } else if (response.body.error) {
+    } else if (body.error) {
       callback("Unable to find location!", undefined);
     } else {
-      const data = response.body;
       callback(
         undefined,
-        data.current.weather_descriptions +
+        body.current.weather_descriptions +
           ". It is currently " +
-          data.current.temperature +
+          body.current.temperature +
           " degrees out. There is a " +
-          data.current.precip +
+          body.current.precip +
           " chance of rain."
       );
     }
