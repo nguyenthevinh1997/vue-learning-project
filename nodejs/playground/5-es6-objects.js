@@ -14,9 +14,9 @@ console.log(user);
 // Object destructuring
 
 const product = {
-  label: "Red notebook",
+  // label: "Red notebook",
   price: 3,
-  stock: 201,
+  // stock: 201,
   salePrice: undefined,
   rating: 4.2
 };
@@ -29,7 +29,7 @@ const product = {
 // console.log(stock);
 // console.log(rating);
 
-const transaction = (type, { label, stock }) => {
+const transaction = (type, { label, stock = 0 } = {}) => {
   console.log(type, label, stock);
 };
 
